@@ -1,0 +1,47 @@
+.header-main{
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    background:linear-gradient(to right, black, gray);
+    padding: 8px;
+    .menuicon {
+        width: 30px;
+        height: 30px;
+    }
+    .header-name {
+        font-size: 24px;
+        font-weight: 600;
+        color: #FFD43B;
+    }
+}
+
+.menuoption-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100vh;
+    background: linear-gradient(to right, black, gray);
+    transition: top 0.5s ease-in-out;
+    .menulist {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        color: white;
+        list-style: none;
+        padding: 3em;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .close-icon {
+        width: 14px;
+        height: 16px;
+        position: relative;
+        left: 20px;
+        top: 20px;
+    }
+}
+
+.open-menu {
+    top: 0px;
+}
