@@ -2,7 +2,8 @@ import xmark from '@/assets/icons/xmark.svg';
 import classes from './header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-export default function MenuOptions( { showMenu, setShowMenu }: { showMenu: boolean}) {
+import { Dispatch, SetStateAction } from 'react';
+export default function MenuOptions( { showMenu, setShowMenu }: { showMenu: boolean, setShowMenu: Dispatch<SetStateAction<boolean>>}) {
     return(
         <div className={`${classes['menuoption-main']} ${showMenu ? classes['open-menu'] : ''}`}>
             <Image onClick={() => setShowMenu(false)} src={xmark}  alt="Close Icon" className={classes['close-icon']}/>
